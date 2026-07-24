@@ -75,7 +75,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
     },
     {
       id: 'pl-letter',
-      src: `${import.meta.env.BASE_URL}plates/letter.jpg`,
+      src: `${import.meta.env.BASE_URL}plates/choir.jpg`,
       plate: 'XII',
       caption: 'A letter to Santa — pencil, pressed hard',
       rotate: -3.5,
