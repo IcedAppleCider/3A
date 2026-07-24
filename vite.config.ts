@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/3A/",          // ← 关键这一行（仓库名）
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {

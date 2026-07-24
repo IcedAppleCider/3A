@@ -12,7 +12,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
   'scene-1-1': [
     {
       id: 'pl-temple',
-      src: '/plates/temple.jpg',
+      src: `${import.meta.env.BASE_URL}plates/temple.jpg`,
       plate: 'I',
       caption: 'Speculum Romanae Magnificentiae — Portico of the Temple of Julius',
       rotate: -2.2,
@@ -24,7 +24,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
   'scene-1-2': [
     {
       id: 'pl-map',
-      src: '/plates/map.jpg',
+      src: `${import.meta.env.BASE_URL}plates/map.jpg`,
       plate: 'III',
       caption: "Campo de' Fiori — the field, from above",
       rotate: 2.4,
@@ -36,7 +36,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
   'scene-1-3': [
     {
       id: 'pl-constellation',
-      src: '/plates/constellation.jpg',
+      src: `${import.meta.env.BASE_URL}plates/constellation.jpg`,
       plate: 'IX',
       caption: 'Celestial chart — the heavens observed',
       rotate: -1.5,
@@ -45,7 +45,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
     },
     {
       id: 'pl-cartouche',
-      src: '/plates/cartouche.jpg',
+      src: `${import.meta.env.BASE_URL}plates/cartouche.jpg`,
       plate: 'IV',
       caption: 'An empty cartouche — reserved',
       rotate: 4.5,
@@ -57,7 +57,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
   'scene-2-1': [
     {
       id: 'pl-sword',
-      src: '/plates/sword.jpg',
+      src: `${import.meta.env.BASE_URL}plates/sword.jpg`,
       plate: 'X',
       caption: 'A toy sword — the wish, as filed',
       rotate: -2.5,
@@ -66,7 +66,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
     },
     {
       id: 'pl-dragon',
-      src: '/plates/constellation.jpg',
+      src: `${import.meta.env.BASE_URL}plates/constellation.jpg`,
       plate: 'XI',
       caption: 'Crayon dragon — knight & archer, in a child’s hand',
       rotate: 3,
@@ -75,7 +75,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
     },
     {
       id: 'pl-letter',
-      src: '/plates/cartouche.jpg',
+      src: `${import.meta.env.BASE_URL}plates/letter.jpg`,
       plate: 'XII',
       caption: 'A letter to Santa — pencil, pressed hard',
       rotate: -3.5,
@@ -87,7 +87,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
   'scene-2-2': [
     {
       id: 'pl-ticket',
-      src: '/plates/temple.jpg',
+      src: `${import.meta.env.BASE_URL}plates/temple.jpg`,
       plate: 'XV',
       caption: 'A concert ticket — Yvette Young, as dreamed',
       rotate: -2.8,
@@ -96,7 +96,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
     },
     {
       id: 'pl-album',
-      src: '/plates/map.jpg',
+      src: `${import.meta.env.BASE_URL}plates/map.jpg`,
       plate: 'XVI',
       caption: 'The Tide — an album cover, in a shy fans memory',
       rotate: 3.2,
@@ -108,7 +108,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
   'scene-2-3': [
     {
       id: 'pl-corgi',
-      src: '/plates/burin.jpg',
+      src: `${import.meta.env.BASE_URL}plates/burin.jpg`,
       plate: 'XVII',
       caption: 'A corgi pup — the wish, as written: one corgi',
       rotate: -2,
@@ -117,7 +117,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
     },
     {
       id: 'pl-photo-frame',
-      src: '/plates/cartouche.jpg',
+      src: `${import.meta.env.BASE_URL}plates/cartouche.jpg`,
       plate: 'XVIII',
       caption: 'A family photo replaced — new frame, film still on',
       rotate: 2.2,
@@ -129,7 +129,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
   'scene-3-1': [
     {
       id: 'pl-moth',
-      src: '/plates/moth.jpg',
+      src: `${import.meta.env.BASE_URL}plates/moth.jpg`,
       plate: 'VI',
       caption: 'Moth & candle — plate kept in the dark',
       rotate: 2.2,
@@ -139,7 +139,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
     /* 愿望卡片附近 · 交错左右 · 软弹枪 / 赛车模型 / Block Rockin' Beats */
     {
       id: 'pl-softgun',
-      src: '/plates/sword.jpg',
+      src: `${import.meta.env.BASE_URL}plates/sword.jpg`,
       plate: 'XIX',
       caption: 'Soft-serve blaster — Poppy\'s wish, filed',
       rotate: -3.1,
@@ -148,7 +148,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
     },
     {
       id: 'pl-racecar',
-      src: '/plates/map.jpg',
+      src: `${import.meta.env.BASE_URL}plates/map.jpg`,
       plate: 'XX',
       caption: 'Die-cast racer — Theo\'s wish, boxed',
       rotate: 2.8,
@@ -157,7 +157,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
     },
     {
       id: 'pl-blockrockinbeats',
-      src: '/plates/cartouche.jpg',
+      src: `${import.meta.env.BASE_URL}plates/cartouche.jpg`,
       plate: 'XXI',
       caption: 'Block Rockin\' Beats — the alarm clock soundtrack',
       rotate: -2.4,
@@ -175,7 +175,7 @@ export const scenePlates: Record<string, PlateItem[]> = {
 export const bottomPlates: PlateItem[] = [
   {
     id: 'pl-choir',
-    src: '/plates/choir.jpg',
+    src: `${import.meta.env.BASE_URL}plates/choir.jpg`,
     plate: 'V',
     caption: 'Wenceslaus Hollar — St George’s Chapel Choir, Windsor, 1663',
     rotate: -1.6,
