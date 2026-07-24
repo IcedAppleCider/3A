@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@theme {
+  /* 纸张 · 米色 */
+  --color-cream: #f1ebda;
+  --color-cream-2: #f7f2e3;
+  /* 油墨 · 群青 */
+  --color-ink: #2a3ca4;
+  --color-ink-deep: #1e2d82;
+
+  --font-sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-header: "Archivo Black", "Archivo", sans-serif;
+  --font-type: "Courier Prime", "Courier New", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-cream-2);
+}
+
+/* 活字压印感 */
+.ink-press {
+  text-shadow: 0.6px 0.6px 0 rgba(30, 45, 130, 0.28);
+}
+
+/* 括注统一倾斜：用合成 oblique，让中英文倾斜角度一致，
+   避免 Courier Prime 英文真斜体与中文合成斜体角度不匹配 */
+.paren-oblique {
+  font-style: normal;
+  transform: skewX(-11deg);
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(42, 60, 164, 0.5);
+  border: 3px solid var(--color-cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(42, 60, 164, 0.75);
+}
+
+/* —— Glitch 区块 · 8-bit 弹窗 —— */
+@keyframes pixel-cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.glitch-block .glitch-popup-wrap {
+  position: relative;
+  width: min(100%, 300px);
+}
+
+/* 外围底色框 */
+.glitch-block .glitch-popup-frame {
+  position: relative;
+  padding: 10px;
+  background: #0f1110;
+}
+
+.glitch-block .glitch-popup {
+  position: relative;
+}
+
+/* 动态扫描线 overlay · 覆盖整个弹窗块 */
+.glitch-block .glitch-popup-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.55;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    #abaecd 1.5px,
+    #9ca6c3 6px
+  );
+  background-size: 100% 48px;
+  animation: scanline-scroll 2s linear infinite;
+}
+
+.glitch-block .pixel-terminal {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #0000e5;
+  outline: 3px solid #0000ff;
+  outline-offset: 2px;
+  background: repeating-linear-gradient(
+    0deg,
+    #e5e5e5 0,
+    #e5e5e5 1px,
+    #ffffff 1px,
+    #ffffff 2px
+  );
+  image-rendering: pixelated;
+}
+
+.glitch-block .pixel-terminal__chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 6px;
+  border-bottom: 3px solid #0000e5;
+  background: repeating-linear-gradient(
+    0deg,
+    #0000e5 0,
+    #0000e5 4px,
+    #0000ff 4px,
+    #0000ff 8px
+  );
+  font-family: 'Press Start 2P', monospace;
+  font-size: 6px;
+  line-height: 1.5;
+  color: #ffffff;
+  -webkit-font-smoothing: none;
+}
+
+.glitch-block .pixel-terminal__btns {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.glitch-block .pixel-terminal__btns i {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #ffffff;
+  background: #0000e5;
+}
+
+.glitch-block .pixel-terminal__screen {
+  position: relative;
+  z-index: 1;
+  padding: 10px 8px 12px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  line-height: 1.85;
+  color: #0000e5;
+  -webkit-font-smoothing: none;
+}
+
+.glitch-block .pixel-terminal__line {
+  margin: 0;
+  word-break: break-word;
+}
+
+.glitch-block .pixel-terminal__prompt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 0;
+}
+
+.glitch-block .pixel-terminal__arrow {
+  flex-shrink: 0;
+}
+
+.glitch-block .pixel-terminal__cursor {
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+  background: #0000e5;
+  animation: pixel-cursor-blink 1s steps(1, end) infinite;
+}
+
+.glitch-block .glitch-scanlines {
+  display: none;
+}
+
+@keyframes scanline-scroll {
+  to {
+    background-position: 0 48px;
+  }
+}
